@@ -89,11 +89,51 @@
 
 # # exercício mês de nascimento
 
-meses = ('janeiro', 'fevereiro', 'março', 'abril', 'maio', 'junho', 'julho', 'agosto', 'setembro', 'outubro', 'novembro', 'dezembro')
+# meses = ('janeiro', 'fevereiro', 'março', 'abril', 'maio', 'junho', 'julho', 'agosto', 'setembro', 'outubro', 'novembro', 'dezembro')
 
-data = input('Digite a sua data de nascimento no formato: DD-MM-AAAA ')
-print('Sua data de aniversário é ',data)
-mes = data[3:5]
-mes_final = meses[int(mes)-1]
-print('Você nasceu no mês de',mes_final)
+# data = input('Digite a sua data de nascimento no formato: DD-MM-AAAA ')
+# print('Sua data de aniversário é ',data)
+# mes = data[3:5]
+# mes_final = meses[int(mes)-1]
+# print('Você nasceu no mês de',mes_final)
+
+# Aula 9 Dicionário
+
+ricardo = {'nome': 'ricardo', 'sobrenome': 'shinoda', 'profissão': 'engenheiro de dados', 'filhos': ['luisa', 'lucas']}
+print(ricardo)
+print(type(ricardo)) # para mostrar qual o tipo
+print(ricardo['filhos'])
+print(len(ricardo))
+
+del ricardo['filhos'] # para deletar algum valor
+print(ricardo)
+
+ricardo['profissão'] = 'engenheiro de software jr' # para alterara algum valor no dicionário
+print(ricardo)
+
+print('filhos' in ricardo) # para saber se existe alguma chave dentro do dicionário
+
+# loop for
+
+for x in ricardo: # loop: para cada chave de ricardo, imprima a chave
+    print(x)
+
+for x in ricardo:
+    print(x+': '+ricardo[x])
+
+# GET
+
+print(ricardo.get('nome', 'Esta informação não consta no cadastro')) # para buscar uma info ou mensagem de erro personalizada
+
+#voltando os filhos
+ricardo['filhos'] = ['luisa', 'lucas']
+print(ricardo)
+
+ricardo['filhos'].append('Mariana') # adicionando valores à lista
+print(ricardo)
+
+ricardo.clear() # para limpar um dicionário
+print(ricardo)
+
+# exercício
 
