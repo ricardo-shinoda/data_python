@@ -27,5 +27,5 @@ else:
 
 print('Nome:',nome)
 print('Média:',media)
-print('Percentual de presença:',(assiduidade / total_aula) * 100)
+print('Percentual de presença:',str((assiduidade / total_aula) * 100)+' %')
 print(resultado)
