@@ -25,7 +25,7 @@ if sexo == 'm':
 elif sexo == 'h':
     if imc(peso, altura) < 20.7:
         print('Abaixo do peso')
-    elif imc(peso, altura) > 20.7 and imc(peso, altura) <= 26.4:
+    elif imc(peso, altura) >= 20.7 and imc(peso, altura) <= 26.4:
         print('no peso normal')
     elif imc(peso, altura) > 26.4 and imc(peso, altura) <= 27.8:
         print('marginalmente acima do peso')
