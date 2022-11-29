@@ -10,6 +10,15 @@ def megasena(): # jogo aleatório mega-sena
             continue
         else:
             jogo.append(num)
-    print(jogo)
+    print(sorted(jogo)) # para ordenar uma lista
 
 megasena()
+
+# Função Choice (para escolher aleatóriamente alguim item da lista - fazer um sorteio)
+
+alunos = ['Luísa','Lucas', 'Paula', 'Ricardo']
+print(random.choice(alunos))
+
+# Pegar uma amostra de uma lista
+
+print(random.sample(alunos, 2))
