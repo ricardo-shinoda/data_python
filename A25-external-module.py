@@ -5,5 +5,5 @@ y = [1200, 1300, 5000, 900, 4000, 2500]
 plt.plot(x, y)
 
 legend = ['january', 'february', 'march', 'april', 'may', 'june']
-plt.xticks(x, legend)
+plt.xticks(x, legend) # para substituir o número (x) por legenda
 plt.show()

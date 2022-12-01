@@ -11,7 +11,7 @@ x = [1, 2, 3, 4, 5]
 
 def count():
     name_list = []
-    while len(name_list) < 6:
+    while len(name_list) < 5:
         start = time.perf_counter()
         letter = input('Type a word: ')
         end = time.perf_counter()
@@ -21,10 +21,10 @@ def count():
         tempo = round(end - start, 2)
         counted_time.append(tempo)
 count()
-# plt.plot(x, counted_time)
 # print(start_time)
 # print(end_time)
-print(counted_time)
+# print(counted_time)
+plt.plot(x, counted_time)
 
 legend = ['first','second', 'third', 'fourth', 'fifth']
 plt.xticks(x, legend)
