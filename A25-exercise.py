@@ -5,8 +5,9 @@ import matplotlib.pyplot as plt
 
 start_time = []
 end_time = []
-y = [] # here will be Y
+counted_time = [] # here will be Y
 x = [1, 2, 3, 4, 5]
+
 
 def count():
     name_list = []
@@ -18,12 +19,12 @@ def count():
         start_time.append(start)
         end_time.append(end)
         tempo = round(end - start, 2)
-        y.append(tempo)
+        counted_time.append(tempo)
 count()
-plt.plot(x, y)
+# plt.plot(x, counted_time)
 # print(start_time)
 # print(end_time)
-# print(y)
+print(counted_time)
 
 legend = ['first','second', 'third', 'fourth', 'fifth']
 plt.xticks(x, legend)
