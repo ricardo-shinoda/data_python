@@ -7,6 +7,9 @@ start_time = []
 end_time = []
 counted_time = [] # here will be Y
 x = [1, 2, 3, 4, 5]
+repeat = 5
+
+print('Digite vezes alguma palavra para contar o tempo entre as digitações')
 
 
 def count():
