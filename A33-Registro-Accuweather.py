@@ -1,6 +1,7 @@
 import requests
 import json
 import pprint
+
 accuwweatherAPIKey = '6ZxEsAOjNyT0h2EnC5rQlW8Brg4tCGtB'
 
 r = requests.get('http://www.geoplugin.net/json.gp')
@@ -17,4 +18,8 @@ else:
     if (r.status_code != 200):
         print('Não foi possível obter a localização.')
     else:
-        print(pprint.pprint(json.loads(r2.text)))
+        locationResponse = (json.loads(r2.text))
+        nomeLocal = locationResponse['LocalizedName'] + "," + locationResponse['AdministrativeArea']['LocalizedName'] + "." + locationResponse['Country']['LocalizedName']
+        codigoLocal = locationResponse['Key']
+        print("Local: ", nomeLocal)
+        print("Código do local: ", codigoLocal)
