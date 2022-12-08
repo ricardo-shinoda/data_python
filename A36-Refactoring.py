@@ -1,6 +1,6 @@
 import requests
 import json
-# import pprint
+import pprint
 
 accuweatherAPIKey = '6ZxEsAOjNyT0h2EnC5rQlW8Brg4tCGtB' # API Key para acessar a api accuWeather
 
@@ -10,6 +10,7 @@ def getCoordinates(): # To get Coordinates
         print('Não foi possível obter a localização (r).')
     else:
         location = json.loads(r.text) # transformar o request da api em Json
+        # print(pprint.pprint(location))
         coordinate = {}
         coordinate['long'] = location['geoplugin_longitude'] # acessando a longitude
         coordinate['lat'] = location['geoplugin_latitude'] # acessando a latitude
@@ -24,9 +25,10 @@ def getLocalCode(lat, long):
         print('Não foi possível obter a localização (r2).')
     else:
         locationResponse = (json.loads(r.text)) # transformando o response em json
+        # print(pprint.pprint(locationResponse))
         localInfo = {}
-        localInfo['nomeLocal'] = locationResponse['LocalizedName'] + "," + locationResponse['AdministrativeArea']['LocalizedName'] + "." + locationResponse['Country']['LocalizedName']
-        localInfo['codigoLocal'] = locationResponse['Key']
+        localInfo['localName'] = locationResponse['LocalizedName'] + "," + locationResponse['AdministrativeArea']['LocalizedName'] + "." + locationResponse['Country']['LocalizedName']
+        localInfo['localCode'] = locationResponse['Key']
         return localInfo
 
 def getCurrentWeather(localCode, localName):
@@ -55,5 +57,5 @@ currentWeather = getCurrentWeather(local['localCode'], local['localName'])
 
 print('Clime atual em: ' + currentWeather['localName'])
 print(currentWeather['textoClima'])
-print('Temperature: ' + currentWeather['Temperature'] + "\xb0" + "C")
+print('Temperatura: ' + str(currentWeather['temperatura']) + "\xb0" + "C")
 
