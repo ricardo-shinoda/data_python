@@ -10,5 +10,5 @@ else:
     long = location['geoplugin_longitude']
     lat = location['geoplugin_latitude']
     # print(pprint.pprint(location)) # Para visualizar de forma mais fácil
-    print(long)
-    print(lat)
+    print('Latitude:', long)
+    print('Longitude:',lat)
