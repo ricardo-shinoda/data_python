@@ -16,8 +16,8 @@ def getCoordinates():
             coordinate = {}
             coordinate['long'] = location['geoplugin_longitude']
             coordinate['lat'] = location['geoplugin_latitude']
-            print(coordinate['long'])
-            print(coordinate['lat'])
+            # print(coordinate['long'])
+            # print(coordinate['lat'])
             return coordinate
         except:
             print('Error on get coordinates')
@@ -35,8 +35,28 @@ def getLocalCode(lat, long):
             localInfo = {}
             localInfo['localName'] = localCodeResponse['LocalizedName'] + " , " + localCodeResponse['AdministrativeArea']['LocalizedName'] + " - " + localCodeResponse['Country']['LocalizedName']
             localInfo['localCode'] = localCodeResponse['Key']
-            print(localInfo)
+            # print(localInfo)
             return localInfo
+        except:
+            return None
+
+def getCurrentWeather(localCode, localName):
+
+    CurrentConditionAPIUrl = "http://dataservice.accuweather.com/currentconditions/v1/" + localCode + "?apikey=" + apiKey + "&language=pt-br"
+
+    r = requests.get(CurrentConditionAPIUrl) # Acessando outra api para obter a temperatura com a chave do local obtido na requisição anterior.
+    if (r.status_code != 200):
+        print('Não foi possível obter o clima atual (r3).')
+        return None
+    else:
+        try:
+            CurrentConditionResponse = (json.loads(r.text))
+            weatherInfo = {}
+            # print(pprint.pprint(CurrentConditionResponse)) # Apenas para saber o formato que está vindo
+            weatherInfo['textoClima'] = CurrentConditionResponse[0]['WeatherText']
+            weatherInfo['temperatura'] = CurrentConditionResponse[0]['Temperature']['Metric']['Value']
+            weatherInfo['localName'] = localName
+            return weatherInfo
         except:
             return None
 
@@ -54,12 +74,21 @@ def getWeatherForecast(localCode, localName):
             # detailed = forecastResponse['DailyForecast']
             weatherInfo = []
             for item in forecastResponse['DailyForecasts']:
-                print(item)
-                weatherInfo['previsao'] = forecastResponse['DailyForecasts']['Temperature']
-            return  
+                forecast = {}
+                # print(item)
+                forecast['clima'] = item['IconPhrase']
+                forecast['max'] = item['Temperature']['Maximum']['Value']
+                forecast['min'] = item['Temperature']['Minimum']['Value']
+                forecast['dia'] = item['EpochDate']
+                weatherInfo.append(forecast)
+            return  weatherInfo
         except:
             return None
 
 coordinates = getCoordinates()
 local = getLocalCode(coordinates['lat'], coordinates['long'])
+currentWeather = getCurrentWeather(local['localCode'], local['localName'])
 forecast = getWeatherForecast(local['localCode'], local['localName'])
+
+print('Clima atual em: ', local['localName'])
+print('Clima: ',currentWeather['textoClima'])
