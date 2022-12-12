@@ -3,7 +3,7 @@ import json
 import pprint
 # 6ZxEsAOjNyT0h2EnC5rQlW8Brg4tCGtB
 
-accuweatherAPIKey = '6ZxEsAOjNyT0h2EnC5rQlW8Brg4tCGtBd' # API Key para acessar a api accuWeather
+accuweatherAPIKey = '6ZxEsAOjNyT0h2EnC5rQlW8Brg4tCGtB' # API Key para acessar a api accuWeather
 
 def getCoordinates(): # To get Coordinates
     r = requests.get('http://www.geoplugin.net/json.gp') # url da api
@@ -13,7 +13,6 @@ def getCoordinates(): # To get Coordinates
     else:
         try:
             location = json.loads(r.text) # transformar o request da api em Json
-            # print(pprint.pprint(location))
             coordinate = {}
             coordinate['long'] = location['geoplugin_longitude'] # acessando a longitude
             coordinate['lat'] = location['geoplugin_latitude'] # acessando a latitude

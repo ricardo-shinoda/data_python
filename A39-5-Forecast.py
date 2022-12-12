@@ -47,8 +47,18 @@ def getWeatherForecast(localCode, localName):
         print('Não foi possível obter a previsão do tempo, tente novamente.')
         return None
     else:
-        forecastResponse = (json.loads(r.text))
-        print(pprint.pprint(forecastResponse))
+        try:
+            forecastResponse = (json.loads(r.text))
+            # forecast = forecastResponse[DailyForecasts]
+            # print(pprint.pprint(forecastResponse))
+            # detailed = forecastResponse['DailyForecast']
+            weatherInfo = []
+            for item in forecastResponse['DailyForecasts']:
+                print(item)
+                weatherInfo['previsao'] = forecastResponse['DailyForecasts']['Temperature']
+            return  
+        except:
+            return None
 
 coordinates = getCoordinates()
 local = getLocalCode(coordinates['lat'], coordinates['long'])
