@@ -22,8 +22,10 @@ def getCoordinates():
         except:
             print('Error on get coordinates')
 
+# "http://dataservice.accuweather.com/locations/v1/cities/geoposition/search?apikey=6ZxEsAOjNyT0h2EnC5rQlW8Brg4tCGtB&q=lat%2Clong&language=pt-br&toplevel=true"
+
 def getLocalCode(lat, long):
-    locationAPIUrl = "http://dataservice.accuweather.com/locations/v1/cities/geoposition/search?apikey=" + apiKey + "&q=" + lat + "%2C" + long + "&language=pt-br"
+    locationAPIUrl = "http://dataservice.accuweather.com/locations/v1/cities/geoposition/search?apikey=" + apiKey + "&q=" + lat + "%2C" + long + "&language=pt-br&toplevel=true"
     r = requests.get(locationAPIUrl)
     if (r.status_code != 200):
         print('Não foi possível obter a localização (localCode)')
@@ -60,7 +62,7 @@ def getCurrentWeather(localCode, localName):
         except:
             return None
 
-def getWeatherForecast(localCode, localName):
+def getWeatherForecast(localCode):
     weatherForecast = "http://dataservice.accuweather.com/forecasts/v1/daily/5day/" + localCode + "?apikey=" + apiKey + "&language=pt-br&metric=true"
     r = requests.get(weatherForecast)
     if (r.status_code != 200):
@@ -69,26 +71,33 @@ def getWeatherForecast(localCode, localName):
     else:
         try:
             forecastResponse = (json.loads(r.text))
-            # forecast = forecastResponse[DailyForecasts]
-            # print(pprint.pprint(forecastResponse))
-            # detailed = forecastResponse['DailyForecast']
             weatherInfo = []
             for item in forecastResponse['DailyForecasts']:
                 forecast = {}
-                # print(item)
-                forecast['clima'] = item['IconPhrase']
                 forecast['max'] = item['Temperature']['Maximum']['Value']
                 forecast['min'] = item['Temperature']['Minimum']['Value']
+                forecast['clima'] = item['Day']['IconPhrase']
                 forecast['dia'] = item['EpochDate']
                 weatherInfo.append(forecast)
-            return  weatherInfo
+                print(weatherInfo)
+            return weatherInfo
         except:
             return None
 
-coordinates = getCoordinates()
-local = getLocalCode(coordinates['lat'], coordinates['long'])
-currentWeather = getCurrentWeather(local['localCode'], local['localName'])
-forecast = getWeatherForecast(local['localCode'], local['localName'])
+try:
+    coordinates = getCoordinates()
+    local = getLocalCode(coordinates['lat'], coordinates['long'])
+    currentWeather = getCurrentWeather(local['localCode'], local['localName'])
 
-print('Clima atual em: ', local['localName'])
-print('Clima: ',currentWeather['textoClima'])
+
+    print('Clima atual em: ', local['localName'])
+    print('Clima: ',currentWeather['textoClima'])
+    print('Temperatura: ' + str(currentWeather['temperatura']) + "\xb0" + "C")
+
+    forecast = getWeatherForecast(local['localCode'])
+    # print(forecast)
+    for dia in forecast:
+        print(dia['dia'])
+        print(dia['Mínima: ' + str(dia['min']) + "\xb0" + "C"])
+except:
+    print('Erro ao processar a solicitação. Entre em contato com o suporte.')
