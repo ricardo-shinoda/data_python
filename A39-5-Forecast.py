@@ -83,7 +83,6 @@ def getWeatherForecast(localCode):
             return weatherInfo
         except:
             return None
-
 try:
     coordinates = getCoordinates()
     local = getLocalCode(coordinates['lat'], coordinates['long'])
