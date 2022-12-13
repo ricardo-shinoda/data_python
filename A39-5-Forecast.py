@@ -60,7 +60,7 @@ def getCurrentWeather(localCode, localName):
         except:
             return None
 
-def getWeatherForecast(localCode, localName):
+def getWeatherForecast(localCode):
     weatherForecast = "http://dataservice.accuweather.com/forecasts/v1/daily/5day/" + localCode + "?apikey=" + apiKey + "&language=pt-br&metric=true"
     r = requests.get(weatherForecast)
     if (r.status_code != 200):
@@ -69,26 +69,34 @@ def getWeatherForecast(localCode, localName):
     else:
         try:
             forecastResponse = (json.loads(r.text))
-            # forecast = forecastResponse[DailyForecasts]
-            # print(pprint.pprint(forecastResponse))
-            # detailed = forecastResponse['DailyForecast']
             weatherInfo = []
             for item in forecastResponse['DailyForecasts']:
                 forecast = {}
                 # print(item)
-                forecast['clima'] = item['IconPhrase']
+                forecast['clima'] = item['Day']['IconPhrase']
                 forecast['max'] = item['Temperature']['Maximum']['Value']
                 forecast['min'] = item['Temperature']['Minimum']['Value']
                 forecast['dia'] = item['EpochDate']
                 weatherInfo.append(forecast)
+                # print(weatherInfo)
             return  weatherInfo
         except:
             return None
+try:
+    coordinates = getCoordinates()
+    local = getLocalCode(coordinates['lat'], coordinates['long'])
+    currentWeather = getCurrentWeather(local['localCode'], local['localName'])
 
-coordinates = getCoordinates()
-local = getLocalCode(coordinates['lat'], coordinates['long'])
-currentWeather = getCurrentWeather(local['localCode'], local['localName'])
-forecast = getWeatherForecast(local['localCode'], local['localName'])
+    print('Clima atual em: ', local['localName'])
+    print('Clima: ',currentWeather['textoClima'])
 
-print('Clima atual em: ', local['localName'])
-print('Clima: ',currentWeather['textoClima'])
+    forecast = getWeatherForecast(local['localCode'])
+    print(forecast['clima'], forecast['max'], forecast['min'], forecast['dia'])
+    for day in forecast:
+        print(day['dia'])
+        print('Mínima: ' + str(day['min']) + "\xb0" + "C")
+        print('Máxima: ' + str(day['max']) + "\xb0" + "C")
+        print('Clima: ' + day['clima'])
+
+except:
+    print('Erro  ao processar a solicitação. Entre em contato com o suporte.')
