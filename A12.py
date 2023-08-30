@@ -34,7 +34,7 @@ cidade = input('Digite a cidade: ').lower()
 
 # usando o OR
 
-if cidade == 'rio' or cidade == 'sao paulo':
+if cidade == 'bauru' or cidade == 'sao paulo':
     print
     
     if sexo == 'm':
@@ -50,4 +50,4 @@ if cidade == 'rio' or cidade == 'sao paulo':
     else:
         print('erro na entrada de dados')
 else:
-    print('teste apenas para rio ou sao paulo')
+    print('teste apenas para bauru ou sao paulo')
