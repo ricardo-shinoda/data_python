@@ -1,6 +1,6 @@
 # Para imprimir cada elemento da lista
 
-compras = ['arroz','feijao','macarrao','carne']
+compras = ['arroz', 'feijao', 'macarrao', 'carne']
 
 for i in compras:
     print(i)
@@ -14,7 +14,7 @@ for i in nome:
 
 # Somatória com loop
 
-vendas = [100,450,300,920,600]
+vendas = [100, 450, 300, 920, 600]
 total = 0
 
 for i in vendas:
@@ -23,13 +23,12 @@ print(total)
 
 # total parcialmente adicionados
 
-vendas = [100,450,300,920,600]
+vendas = [100, 450, 300, 920, 600]
 total = 0
 
 for i in vendas:
     total += i
     print(total)
-
 
 
 # For loop com dicionários - para trazer as chaves
@@ -50,14 +49,14 @@ for i in cores:
 # imprimindo os dois campos
 
 for i in cores:
-    print(i,':',cores[i])
-
+    print(i, ':', cores[i])
 
 
 # loop for aninhado
 
 # imprimindo todos os objetos da lista
-compras = [['arroz','feijao','macarrao'],['carne','frango'],['açúcar','chocolate']]
+compras = [['arroz', 'feijao', 'macarrao'], [
+    'carne', 'frango'], ['açúcar', 'chocolate']]
 
 for i in compras:
     print(i)
@@ -70,10 +69,10 @@ for i in compras:
 
 # Range
 
-for i in range(0,10):
+for i in range(0, 10):
     print(i)
 
-# Contagem regressiva
+# Regressive counting
 
-for i in range(0,10):
+for i in range(0, 10):
     print(10-i)
