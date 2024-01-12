@@ -9,10 +9,8 @@
 # print(pessoas)
 
 
-
 # Loop até um determinado item entrar na lista:
 
-x = 0
 pessoas = []
 
 while 'joao' not in pessoas:
@@ -32,6 +30,7 @@ while x < 4:
     if nome == 'joao':
         continue
     pessoas.append(nome)
+    x += 1
 
 print(pessoas)
 
@@ -42,11 +41,9 @@ pessoas = []
 
 while x < 4:
     nome = input('Qual o seu nome? ')
+    # evoid to have "joao" added tto the list
     if nome == 'joao':
         continue
     pessoas.append(nome)
 
 print(pessoas)
-
-
-

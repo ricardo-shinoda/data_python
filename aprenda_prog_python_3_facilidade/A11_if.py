@@ -20,8 +20,8 @@ if idade != 18:
 
 y = 5
 if y:
-    print('true') # true
+    print('true')  # true
 
 x = 0
 if x:
-    print('true') # false
+    print('true')  # false
