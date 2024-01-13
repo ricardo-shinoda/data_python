@@ -17,13 +17,14 @@ while pergunta == 's':
             else:
                 valid_preco = True
         except:
-            print("Formato de preço inválido. Use apenas números e separe os centavos com '.'.")
+            print(
+                "Formato de preço inválido. Use apenas números e separe os centavos com '.'.")
 
     pergunta = input('Deseja comprar mais alguma coisa? S ou N? ').lower()
-    fatura.append([produto,preco])
+    fatura.append([produto, preco])
     valid_preco = False
     total += preco
 
 for i in fatura:
-    print(i[0], ':','R$',i[1])
-print('O total da fatura é:','R$',total)
+    print(i[0], ':', 'R$', i[1])
+print('O total da fatura é:', 'R$', total)
