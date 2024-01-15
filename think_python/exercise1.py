@@ -25,7 +25,7 @@ print(2++2)
 
 ###########################
 
-#Na notação matemática, zeros à esquerda são aceitáveis, como em 02. O que acontece se você tentar usar isso no Python?
+#! Na notação matemática, zeros à esquerda são aceitáveis, como em 02. O que acontece se você tentar usar isso no Python?
 
 # print(02)
 
@@ -35,7 +35,6 @@ print(2++2)
 
 # O que acontece se você tiver dois valores sem nenhum operador entre eles?
 
-print(2 4)
+# print(2 4)
 
 # response: SyntaxError: invalid syntax. Perhaps you forgot a comma?
-
