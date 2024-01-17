@@ -32,3 +32,6 @@ print(tempo_total / 60)
 # resultado 38.1 = 38 minutos e 6 segundos
 # Saiu  6:52
 # Chegou 7:40:06
+
+
+print(422 / 5)
