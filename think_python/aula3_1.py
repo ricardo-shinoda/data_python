@@ -15,6 +15,17 @@ print(str(outro))
 # Como acrescentar funções dentro de funções
 
 
-def print_lyrics():
-    print("I'm a lumberjack, and I'm okay.")
-    print("I sleep all night and I work all day.")
+def first_setense():
+    print("This is the first sentense")
+
+
+def second_sentense():
+    print("This is the second sentense")
+
+
+def both_sentense():
+    first_setense()
+    second_sentense()
+
+
+both_sentense()
