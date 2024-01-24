@@ -34,4 +34,3 @@ print(tempo_total / 60)
 # Chegou 7:40:06
 
 
-print(422 / 5)
