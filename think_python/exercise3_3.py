@@ -18,18 +18,35 @@ def print_once(a, b, c, d, e, f, g, h, i, j, k):
     print(a, b, c, d, e, f, g, h, i, j, k)
 
 
-def print_twice(a, b, c, d, e, f, g, h, i, j, k):
-    print(a, b, c, d, e, f, g, h, i, j, k)
-    print(a, b, c, d, e, f, g, h, i, j, k)
+# def print_twice(a, b, c, d, e, f, g, h, i, j, k):
+#     print(a, b, c, d, e, f, g, h, i, j, k)
+#     print(a, b, c, d, e, f, g, h, i, j, k)
 
 
-def print_four(a, b, c, d, e, f, g, h, i, j, k):
-    print_twice(a, b, c, d, e, f, g, h, i, j, k)
-    print_twice(a, b, c, d, e, f, g, h, i, j, k)
+# def print_four(a, b, c, d, e, f, g, h, i, j, k):
+#     print_twice(a, b, c, d, e, f, g, h, i, j, k)
+#     print_twice(a, b, c, d, e, f, g, h, i, j, k)
 
+
+# print_once('+', '-', '-', '-', '-', '+', '-', '-', '-', '-', '+')
+# print_four('|', ' ', ' ', ' ', ' ', '|', ' ', ' ', ' ', ' ', '|')
+# print_once('+', '-', '-', '-', '-', '+', '-', '-', '-', '-', '+')
+# print_four('|', ' ', ' ', ' ', ' ', '|', ' ', ' ', ' ', ' ', '|')
+# print_once('+', '-', '-', '-', '-', '+', '-', '-', '-', '-', '+')
+
+# ! using for now
+
+header = ('+', '-', '-', '-', '-', '+', '-', '-', '-', '-', '+')
+body = ('|', ' ', ' ', ' ', ' ', '|', ' ', ' ', ' ', ' ', '|')
 
 print_once('+', '-', '-', '-', '-', '+', '-', '-', '-', '-', '+')
-print_four('|', ' ', ' ', ' ', ' ', '|', ' ', ' ', ' ', ' ', '|')
+
+for i in range(4):
+    print_once('|', ' ', ' ', ' ', ' ', '|', ' ', ' ', ' ', ' ', '|')
+
 print_once('+', '-', '-', '-', '-', '+', '-', '-', '-', '-', '+')
-print_four('|', ' ', ' ', ' ', ' ', '|', ' ', ' ', ' ', ' ', '|')
+
+for i in range(4):
+    print_once('|', ' ', ' ', ' ', ' ', '|', ' ', ' ', ' ', ' ', '|')
+
 print_once('+', '-', '-', '-', '-', '+', '-', '-', '-', '-', '+')

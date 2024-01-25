@@ -1,7 +1,9 @@
-import turtle
-bob = turtle.Turtle()
-print(bob)
-turtle.mainloop()
+# import turtle
+# bob = turtle.Turtle()
+# print(bob)
+# turtle.mainloop()
+
+# ?
 
 # import tkinter as tk
 
@@ -12,3 +14,8 @@ turtle.mainloop()
 # label.pack()
 
 # root.mainloop()
+
+# ?
+
+for i in range(4):
+    print('Hello!')
