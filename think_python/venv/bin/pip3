@@ -1,4 +1,4 @@
-#!/home/ricardo/code/data_python/think_python/venv/bin/python3
+#!/Users/ricardo.shinoda/study/data_python/think_python/venv/bin/python3.11
 # -*- coding: utf-8 -*-
 import re
 import sys
