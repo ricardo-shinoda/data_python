@@ -1,5 +1,6 @@
 import math
 import turtle
+import inspect
 
 bob = turtle.Turtle()
 
@@ -40,6 +41,7 @@ def polygon(t, n, length):
 
 
 def polyline(t, n, length, angle):
+    """Desenha n segmentos na reta com o comprimento dado e ângulo (em graus) entre eles, t é m turtle"""
     for i in range(n):
         t.fd(length)
         t.lt(angle)
@@ -50,11 +52,15 @@ def arc(t, r, angle):
     n = int(arc_length / 3) + 1
     step_length = arc_length / n
     step_angle = float(angle) / n
+    print(f"Antes de chamar polyline: pilha = {inspect.stack()}")
     polyline(t, n, step_length, step_angle)
+    print(f'Depois de chamar polyline: pilha = {inspect.stack()}')
 
 
 def circle(t, r):
+    print(f"Antes de chamar arc: pilha = {inspect.stack()}")
     arc(t, r, 360)
+    print(f'Depois de chamar arc: pilha = {inspect.stack()}')
 
 
 circle(bob, 100)
