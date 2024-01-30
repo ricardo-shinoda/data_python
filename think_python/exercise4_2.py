@@ -9,4 +9,4 @@ def polygon(t, n, length):
         t.lt(angle)
 
 
-polygon(bob, 17, 70)
+polygon(bob, 70, 70)
