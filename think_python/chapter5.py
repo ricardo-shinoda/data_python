@@ -21,5 +21,12 @@ print(remaining2)
 number1 = 4
 number2 = 2
 
+number3 = 10 % 10
+number4 = 100 % 100
+number5 = 100 % 1000
+
 dividable = number1 % number2
-print(dividable)
+# print(dividable)
+print('This is number3:', number3)
+print('This is number4:', number4)
+print('This is number5:', number5)
