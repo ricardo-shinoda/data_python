@@ -16,3 +16,5 @@ def draw(t, length, n):
 
 
 draw(bob, 10, 5)
+
+turtle.exitonclick()
