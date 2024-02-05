@@ -2,7 +2,7 @@ import turtle
 
 
 def koch_curve(t, x):
-    if x < 5:
+    if x < 3:
         t.forward(x)
         return
     else:
