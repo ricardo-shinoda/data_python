@@ -35,3 +35,16 @@ def is_palidrome(name):
 
 
 is_palidrome('Ricardo')
+
+
+def final_palidrome(name):
+    resul = name
+    while len(resul) >= 2:
+        r = middle(resul)
+        resul = r
+        print('this is the resul: ', resul)
+        if len(resul) == 3:
+            print("This can't be a palingrome")
+
+
+final_palidrome('Ricardo')
