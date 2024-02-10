@@ -7,8 +7,31 @@ def last(word):
 
 
 def middle(word):
-    return word[1:-1]
+    return word[2:-2]
 
 
-result = middle(' ')
-print(result)
+def length(word):
+    '''Thinking on work with the lentgh and divide by half and then use it with
+    the functions already using on this file'''
+    comprimento = len(word)
+    div = int(comprimento / 2)
+    print(comprimento)
+    print(div)
+
+
+letra = length('duas')
+
+word = 'ricardoshinoda'
+result_middle = middle(word)
+result_fist = first(word)
+result_last = last(word)
+print('First: ', result_fist)
+print('Middle: ', result_middle)
+print('Last: ', result_last)
+
+
+def is_palidrome(name):
+    print('The name is: ', name)
+
+
+is_palidrome('Ricardo')
