@@ -32,7 +32,7 @@ print('Last: ', result_last)
 
 
 def is_palidrome(f, l, m):
-    if f == l:
+    if f == l and m % 2:
         print('This could be a palindrome')
         print(m)
         comprimento = m
