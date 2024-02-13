@@ -51,21 +51,14 @@ def test(m):
 # test('lucas')
 
 
-def test2(m):
-    result = middle(m)
-    f = first(m)
-    l = last(m)
-    length = len(m)
-    print(result)
-    print(f)
-    print(l)
-    print('The length of m is: ', length)
-    for i in range(length):
-        print(i)
-        if length % 2 == 0 and f == l:
-            print('This could be a palindrome, YES!')
-        else:
-            print('this is not a palindrome, NOPE!')
+def is_palindrome(s):
+    # Remove espaços em branco e converte a string para minúsculas
+    s = s.replace(" ", "").lower()
+
+    # Compara a string original com sua inversa
+    return s == s[::-1]
 
 
-test2('lucas')
+# Exemplo de uso
+print(is_palindrome("Ame a ema"))  # Saída: True
+print(is_palindrome("Ana"))     # Saída: False
