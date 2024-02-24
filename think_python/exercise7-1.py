@@ -59,7 +59,7 @@ def test_square_root():
     Função para testar a função mysqrt e compará-la com math.sqrt.
     Exibe uma tabela com os resultados.
     """
-    print("a\tmysqrt(a)\tmath.sqrt(a)\tdiff")
+    print("a\tmysqrt(a)\t\tmath.sqrt(a)\t\tdiff")
     print("-\t---------\t------------\t----")
     for a in range(1, 10):
         my_sqrt = mysqrt(a)
