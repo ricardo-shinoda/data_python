@@ -35,3 +35,10 @@ suffix = 'ack'
 
 for i in prefixes:
     print(i + suffix)
+
+# Slicing strings
+
+
+s = "Pearl-Jam"
+r = s[3:]
+print(r)
