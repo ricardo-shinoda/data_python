@@ -42,3 +42,9 @@ for i in prefixes:
 s = "Pearl-Jam"
 r = s[3:]
 print(r)
+
+# Kind of rewriting a string
+
+greeting = 'Hello World'
+new_greeting = 'J' + greeting[1:]
+print(new_greeting)
