@@ -48,3 +48,18 @@ print(r)
 greeting = 'Hello World'
 new_greeting = 'J' + greeting[1:]
 print(new_greeting)
+
+# What does this function do?
+
+
+def find(word, letter):
+    index = 0
+    while index < len(word):
+        if word[index] == letter:
+            return index
+        index = index + 1
+    return -1
+
+
+resu = find('text', 'e')
+print(resu)
