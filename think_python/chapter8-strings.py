@@ -72,3 +72,9 @@ for letter in word:
     if letter == 'a':
         count = count + 1
 print(count)
+
+# Word Finding
+
+palavra = 'pessego'
+index = palavra.find('g')
+print(index)
