@@ -63,3 +63,12 @@ def find(word, letter):
 
 resu = find('text', 'e')
 print(resu)
+
+# Loop and counting
+
+word = 'bananaaaaaaaaaaaaaaaaaa'
+count = 0
+for letter in word:
+    if letter == 'a':
+        count = count + 1
+print(count)
