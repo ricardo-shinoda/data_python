@@ -78,3 +78,6 @@ print(count)
 palavra = 'pessego'
 index = palavra.find('g')
 print(index)
+
+index_second = palavra.find('g', 1)
+print(index_second)
