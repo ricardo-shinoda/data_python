@@ -81,3 +81,21 @@ print(index)
 
 index_second = palavra.find('g', 1)
 print(index_second)
+
+# IN operator
+
+response = 'a' in 'banana'
+print(response)
+
+next_response = 'seed' in 'banana'
+print(next_response)
+
+
+def in_both(word1, word2):
+    for letter in word1:
+        if letter in word2:
+            print(letter)
+
+
+test = in_both('apples', 'organges')
+print(test)
