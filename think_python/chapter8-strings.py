@@ -66,7 +66,7 @@ print(resu)
 
 # Loop and counting
 
-word = 'bananaaaaaaaaaaaaaaaaaa'
+word = 'apartamento'
 count = 0
 for letter in word:
     if letter == 'a':
@@ -97,5 +97,17 @@ def in_both(word1, word2):
             print(letter)
 
 
-test = in_both('apples', 'organges')
+test = in_both('apples', 'oranges')
 print(test)
+
+# Comparison
+
+if word == 'banana':
+    print('All right, bananas')
+
+if word < 'banana':
+    print("Your word, " + word + ", comes before banana.")
+elif word > 'banana':
+    print('Your word, ' + word + ', comes after banana')
+else:
+    print('All good, bananas')
