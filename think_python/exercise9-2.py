@@ -21,7 +21,7 @@ def words_without_e(words):
     print(f"Porcentagem de palavras sem 'e': {percentage:.2f}%")
 
 
-# Exemplo de uso:
+# Example:
 word_list = ["hello", "world", "python",
              "programming", "example", "without", "e"]
 words_without_e(word_list)
