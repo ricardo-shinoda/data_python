@@ -1,4 +1,4 @@
 fin = open('word.txt')
 result = fin.readline()
-print(result)
-print(fin)
+word = result.strip()
+print(word)
