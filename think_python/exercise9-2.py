@@ -22,6 +22,6 @@ def words_without_e(words):
 
 
 # Example:
-word_list = ["hello", "world", "python",
+word_list = ["hello", "world", "pythone",
              "programming", "example", "without", "e"]
 words_without_e(word_list)
