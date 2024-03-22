@@ -1,0 +1,36 @@
+Name,Age,Height,Team,Avg_PPG,Avg_Steals,Avg_Rebounds,Avg_Blocks,Avg_Minutes,Avg_Fouls,Championships_Won,All_Star_Selections
+Michael Jordan,30,6'6",Chicago Bulls,30.1,2.3,6.2,0.8,38.3,2.8,6,14
+Magic Johnson,32,6'9",Los Angeles Lakers,19.5,1.9,7.2,0.4,36.7,2.2,5,12
+Larry Bird,35,6'9",Boston Celtics,24.3,1.7,10.0,0.8,38.4,2.6,3,12
+Charles Barkley,31,6'6",Phoenix Suns,22.1,1.5,11.7,0.8,36.7,3.1,0,11
+David Robinson,29,7'1",San Antonio Spurs,21.1,1.4,10.6,3.0,34.7,3.2,2,10
+Scottie Pippen,28,6'8",Chicago Bulls,16.1,2.0,6.4,0.8,36.5,2.4,6,7
+Karl Malone,31,6'9",Utah Jazz,25.0,1.4,10.1,0.8,37.2,3.0,0,14
+John Stockton,32,6'1",Utah Jazz,13.1,2.2,2.7,0.2,31.8,2.1,0,10
+Clyde Drexler,32,6'7",Houston Rockets,20.4,2.0,6.1,0.7,34.6,2.3,1,10
+Shaquille O'Neal,24,7'1",Orlando Magic,23.7,0.6,10.9,2.3,37.7,3.5,4,15
+Gary Payton,26,6'4",Seattle SuperSonics,16.3,1.8,3.9,0.2,35.7,3.0,0,9
+Hakeem Olajuwon,31,7'0",Houston Rockets,21.8,1.7,11.1,3.1,35.7,3.2,2,12
+Patrick Ewing,32,7'0",New York Knicks,21.0,1.0,9.8,2.4,36.5,3.1,0,11
+Reggie Miller,29,6'7",Indiana Pacers,18.2,1.1,3.0,0.2,34.3,2.2,0,5
+Tim Hardaway,27,6'0",Golden State Warriors,17.7,1.6,3.3,0.1,36.9,2.7,0,5
+John Starks,28,6'3",New York Knicks,12.5,1.1,2.6,0.3,29.7,3.0,0,1
+Dennis Rodman,33,6'7",Chicago Bulls,7.3,0.6,13.1,0.6,31.7,3.3,5,2
+Kevin Johnson,28,6'1",Phoenix Suns,17.9,1.5,3.3,0.3,33.5,2.5,0,3
+Alonzo Mourning,25,6'10",Charlotte Hornets,19.8,0.9,9.8,2.8,34.1,3.3,0,7
+Dikembe Mutombo,29,7'2",Denver Nuggets,11.7,0.4,12.3,3.3,34.4,3.1,0,8
+Grant Hill,24,6'8",Detroit Pistons,20.6,1.6,7.9,0.6,36.4,2.5,0,7
+Kevin Garnett,20,6'11",Minnesota Timberwolves,17.8,1.3,10.0,1.6,38.3,3.1,1,15
+Jason Kidd,22,6'4",Dallas Mavericks,12.6,1.9,6.3,0.3,35.6,2.1,1,10
+Dirk Nowitzki,21,7'0",Dallas Mavericks,20.7,0.8,7.5,0.8,35.7,2.3,1,14
+Vince Carter,22,6'6",Toronto Raptors,17.2,1.3,4.4,1.0,34.5,2.6,0,8
+Allen Iverson,24,6'0",Philadelphia 76ers,26.7,2.2,3.7,0.2,41.1,2.6,0,11
+Paul Pierce,22,6'6",Boston Celtics,21.7,1.3,6.0,0.6,37.0,3.1,1,10
+Tim Duncan,23,6'11",San Antonio Spurs,19.0,0.7,10.8,2.2,34.3,2.7,5,15
+Steve Nash,25,6'3",Dallas Mavericks,14.3,0.7,3.0,0.1,30.5,2.4,0,8
+Chris Webber,25,6'9",Sacramento Kings,20.7,1.4,9.8,1.4,37.1,3.0,0,5
+Gary Payton,33,6'4",Seattle SuperSonics,16.3,1.8,3.9,0.2,35.7,3.0,0,9
+Ray Allen,23,6'5",Milwaukee Bucks,18.9,1.1,4.1,0.2,36.9,2.6,1,10
+Kobe Bryant,22,6'6",Los Angeles Lakers,25.0,1.4,5.2,0.5,38.3,3.1,5,18
+Dirk Nowitzki,28,7'0",Dallas Mavericks,22.9,0.8,8.6,0.8,36.5,2.6,1,13
+Kevin Garnett,30,6'11",Minnesota Timberwolves,20.5,1.4,11.4,1.7,38.9,3.2,1,
